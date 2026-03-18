@@ -1,0 +1,43 @@
+def suma(a, b):
+    return a + b
+
+def resta(a, b):
+    return a - b
+
+def multiplicacion(a, b):
+    return a * b
+
+def division(a, b):
+    if b == 0:
+        return "Error: división por cero"
+    return a / b
+
+print("=== CALCULADORA ===")
+
+while True:
+    print("\nOpciones:")
+    print("+  -> Sumar")
+    print("-  -> Restar")
+    print("*  -> Multiplicar")
+    print("/  -> Dividir")
+    print("0  -> Salir")
+
+    opcion = input("Elige una opción: ")
+
+    if opcion == "0":
+        print("Saliendo...")
+        break
+
+    num1 = float(input("Número 1: "))
+    num2 = float(input("Número 2: "))
+
+    if opcion == "+":
+        print("Resultado:", suma(num1, num2))
+    elif opcion == "-":
+        print("Resultado:", resta(num1, num2))
+    elif opcion == "*":
+        print("Resultado:", multiplicacion(num1, num2))
+    elif opcion == "/":
+        print("Resultado:", division(num1, num2))
+    else:
+        print("Opción inválida")
